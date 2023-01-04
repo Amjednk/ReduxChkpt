@@ -7,6 +7,7 @@
  
 }
 .h1{
+  font-family: 'Brush Script MT', cursive;
   margin: 20px;
   padding: 20px;
 }
@@ -25,16 +26,17 @@
   outline: none;
 }
 
-.add-button{
-  height : 45px;
-  width : 90px;
+.display-button{
+  height : 20px;
+  width : 25px;
+  color: salmon;
   border : none;
   border-radius: 5px;
-  background-color: #0b457e;
-
+  margin: 5px;
+  
 }
 
-.add-button:hover{
+.display-button:hover{
   cursor: pointer;
 }
 
@@ -53,16 +55,53 @@
 
 .remove-task-button{
   background-color: #d30516;
-  height: 25px;
+  height: 20px;
   border-radius: 5px;
-  width: 30px;
+  width: 20px;
   border:none;
-  margin-right: 30px;
-
-
-  
+  margin-right: 10px;
 }
-
 .remove-task-button:hover{
   cursor: pointer;
+}
+
+.edit-button{
+  background-color: #050cd3;
+  height: 20px;
+  border-radius: 5px;
+  width: 20px;
+  border:none;
+  margin-right: 30px;
+}
+.edit-button:hover{
+  cursor: pointer;
+}
+
+.update-button{
+  color:white;
+  background-color:  #050cd3;
+  height: 20px;
+  width: 20px;
+  border:none;
+  border-radius: 5px;
+  margin-right: 15px;
+  margin-left: 10px;
+}
+.update-button:hover{
+  cursor: pointer;
+} 
+
+.todo {
+  cursor: pointer;
+}
+.done {
+  text-decoration: line-through;
+}
+.Forms_layout{
+
+  margin: 20px;
+}
+.Buttons_layout{
+
+  margin-left: 5px;
 }

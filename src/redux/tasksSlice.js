@@ -16,10 +16,34 @@ export const tasksSlice = createSlice({
         },
         deleteTask: (state, action)=>{
             return state.filter((el) => el.id !== action.payload.id);
-        }
+        },
+        Completetodo: (state, action) => {
+            state.map((el) => {
+            if (el.id === action.payload.id) {
+                return (el.isDone = !el.isDone);
+            }
+            return el.isDone;
+            });
+        },
+        Edittodo: (state, action) => {
+            state.map((el) =>
+            el.id === action.payload.id ? (el.isEdited = !el.isEdited) : el.isEdited
+            );
+        },
+        Updatetodo: (state, action) => {
+            state.map((el) =>
+            el.id === action.payload.id ? (el.task = action.payload.task) : el.task
+            );
+        },
+        
+        clearDone: (state) => {
+            return state.filter((el) => el.isDone === false);
+        },
+        
     }
 });
 
-export const {addTask, deleteTask} = tasksSlice.actions;
+export const {addTask, deleteTask, Edittodo, Updatetodo, Completetodo, 
+    clearDone} = tasksSlice.actions;
 
 export default tasksSlice.reducer;
